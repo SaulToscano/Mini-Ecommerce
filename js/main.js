@@ -46,7 +46,7 @@ function find_product(category, page =  1) {
         category = document.getElementById('search_input').value;
         category_name = category;
     }
-    fetch(`https://backend-bsale-api-test.herokuapp.com/products/${search_type}?${parameter_type}=${category}&page=${page}`)
+    fetch(`https://mini-ecommerce-api.herokuapp.com/products/${search_type}?${parameter_type}=${category}&page=${page}`)
         .then(res => res.json())
         .then(json => {
             create_paginacion(json);
