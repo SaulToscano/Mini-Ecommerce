@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Bsale Online Store</title>
+    
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+    
+    <!--Libreria BoxIcons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <header class="top_header">
+        <nav class="top_navbar_main_input">
+            <div>Bsale Test</div>
+            <div class="top_search_bar">
+                <input type="text" id="search_input" placeholder="Buscar">
+                <i class='bx bx-search-alt-2' onclick="find_product()"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="main_content_div">
+        <!--Barra de navegacion lateral-->
+        <div class="left_navbar_main_input">
+            <nav>
+                <ul>
+                    <li class="left_navbar_list left_navbar_selected" onclick="find_product(4)">Bebida</li>
+                    <li class="left_navbar_list" onclick="find_product(1)">Bebida Energetica</li>
+                    <li class="left_navbar_list" onclick="find_product(6)">Cerveza</li>
+                    <li class="left_navbar_list" onclick="find_product(2)">Pisco</li>
+                    <li class="left_navbar_list" onclick="find_product(3)">Ron</li>
+                    <li class="left_navbar_list" onclick="find_product(5)">Snack</li>
+                    <li class="left_navbar_list" onclick="find_product(7)">Vodka</li>
+                </ul>
+            </nav>
+        </div>
+        <!--CardSpace-->
+        <div id="productsContainer">
+
+        </div>
+    </div>
+    <!--Pagination Space-->
+    <div id="paginacionContainer">
+
+    </div>
+</body>
+
+</html>

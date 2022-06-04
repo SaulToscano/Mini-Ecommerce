@@ -1,0 +1,165 @@
+body{
+    font-family: "Lato",sans-serif,sans-serif;
+    font-size: 13px;
+    color: #2b353b;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+/*Flex para el navegador izquierdo y el div de contenido*/
+.main_content_div{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Paginacion*/
+
+#paginacionContainer{
+    margin-left: 20%;
+    text-align: center;
+}
+
+#paginacionContainer span{
+    cursor: pointer;
+}
+
+.paginacion_hide{
+    display: none;
+}
+
+.paginacion_actual_page{
+    color: blue;
+    font-weight: 900;
+}
+
+/*Flex para el div de las cartas de los productos*/
+#productsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.products_container_empty{
+    color: red;
+    margin-left: 5%;
+}
+
+/*Estilos para las cartas de los productos*/
+.product_main_div{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 270px;
+    margin: 20px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.product_main_div img{
+    width: 200px;
+    height: 200px;
+}
+
+.product_main_div object{
+    width: 200px;
+    height: 200px;
+}
+
+.product_main_div span{
+    margin-top: 2%;
+}
+
+/*Navegador Izquierdo*/
+.left_navbar_main_input{
+    display: flex;
+    width: 20%;
+    max-width: 300px;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 90px;
+    background-color: #f2f6f7;
+    z-index: 820;
+}
+
+.left_navbar_list{
+    display: block;
+    padding: 11px 18px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.left_navbar_list:hover{
+    border: solid;
+}
+
+.left_navbar_selected{
+    background-color: darkgray;
+    font-weight: 900;
+}
+
+/*Navegador Header*/
+
+.top_header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 901;
+    background: black;
+    color: white;
+    height: 5%;
+}
+
+.top_navbar_main_input{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+.top_search_bar{
+    width: 50%;
+}
+
+.top_search_bar input{
+    width: 60%;
+}
+
+.top_search_bar i{
+    padding-left: 10px;
+}
+
+/*Responsive Web Design - Estilo de la pagina en Celulares*/
+
+@media screen and (max-width: 500px){
+    #productsContainer{
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .product_main_div{
+        width: 200px;
+        margin-bottom: 10%;
+        margin-left: 15%;
+    }
+
+    .left_navbar_main_input{
+        width: 30%;
+    }
+
+    .top_navbar_main_input{
+        margin-top: 5px;
+    }
+
+    .top_search_bar{
+        width: 60%;
+    }
+}
