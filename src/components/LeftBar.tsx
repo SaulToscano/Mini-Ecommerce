@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { categorieType } from '../interfaces/types'
 import { Button } from '@mantine/core';
 
-export default function () {
+export default function ({categoryHandle}: any) {
   const [categories, setCategories] = useState<categorieType>([])
 
   useEffect(() => {
@@ -15,7 +15,8 @@ export default function () {
 
   return (
     <div id="LeftBar_Main_Div">
-      {categories.map(categorie => <Button key={categorie} color="gray" compact style={{width: '150px'}}>{categorie}</Button>)}
+      <Button key={'All'} onClick={() => categoryHandle('All')} color="gray" compact style={{width: '150px'}}>All</Button>
+      {categories.map(categorie => <Button key={categorie} onClick={() => categoryHandle(categorie)} color="gray" compact style={{width: '150px'}}>{categorie}</Button>)}
     </div>
   )
 }

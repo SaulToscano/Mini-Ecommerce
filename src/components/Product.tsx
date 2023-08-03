@@ -2,7 +2,6 @@ import { ProductArrayInterface } from '../interfaces/interface'
 import { Card, Image, Text, Badge, Button, Group, Rating } from '@mantine/core';
 
 export default function ({ products }: ProductArrayInterface) {
-  console.log(products, 'products')
   return (
     <div id='Products_Main_Div'>
       {products?.map(product => {
