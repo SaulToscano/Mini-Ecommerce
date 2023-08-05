@@ -1,0 +1,1 @@
+export const paypalKey = import.meta.env.VITE_PAYPAL_CLIENT_ID

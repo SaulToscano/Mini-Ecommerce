@@ -1,7 +1,16 @@
 import { ProductArrayInterface } from '../interfaces/interface'
 import { Card, Image, Text, Badge, Button, Group, Rating } from '@mantine/core';
+import { useDispatch } from "react-redux";
+import { AddProduct } from "../redux/productsReducer"
+import { reduxProductType } from '../interfaces/types';
 
 export default function ({ products }: ProductArrayInterface) {
+  const dispatch = useDispatch();
+
+  const handleClick = (product: reduxProductType) => {
+    dispatch(AddProduct({...product}))
+  }
+  
   return (
     <div id='Products_Main_Div'>
       {products?.map(product => {
@@ -25,8 +34,8 @@ export default function ({ products }: ProductArrayInterface) {
               {product?.description}
             </Text>
 
-            <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-              Go to product
+            <Button variant="light" color="blue" fullWidth mt="md" radius="md" onClick={() => handleClick(product)}>
+              Add product to cart
             </Button>
           </Card>
         )

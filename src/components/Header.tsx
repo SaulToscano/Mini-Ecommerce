@@ -1,6 +1,7 @@
 import { Input } from '@mantine/core';
 import { IconSearch } from "@tabler/icons-react"
 import {searchClass} from '../interfaces/interface'
+import Cart from './Cart'
 
 export default function ({searchInput, searchHandle}: searchClass) {
 
@@ -13,6 +14,9 @@ export default function ({searchInput, searchHandle}: searchClass) {
         value={searchInput || ''}
         onChange={(e) => searchHandle(e)}
       />
+      <div id='Cart_Main_Div'>
+        <Cart />
+      </div>
     </div>
   )
 }
